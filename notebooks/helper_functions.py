@@ -60,8 +60,9 @@ def import_data(path=None, num_samples=None):
     positions = np.array(positions)
     labels = np.array(labels)
 
-    # Rehape images to matrix format
-    images = images.reshape(images.shape[0], 16, 16)
+    # Rehape images to matrix format, with added channel for convolutional
+    # layers in classification models.
+    images = images.reshape(images.shape[0], 16, 16, 1)
 
     return images, energies, positions, labels
 
