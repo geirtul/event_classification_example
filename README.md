@@ -3,6 +3,7 @@ Standalone repository for classification example on simulated data that can be u
 
 TODO:
 * Standalone data import and exploration
+    Check if transpose of images is necessary
     Pandas
     Numpy
     File saving (hdf5 and npy format)
