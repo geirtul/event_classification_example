@@ -6,3 +6,4 @@ TODO:
     * Check if transpose of images is necessary
     * Pandas currently only used for descriptive stats.
 	Not too very well suited for images.
+    * Storage example using hdf5 format
