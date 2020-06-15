@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
 
 def import_data(path=None, num_samples=None):
@@ -75,3 +76,26 @@ def normalize_image_data(images):
     img_mean = np.mean(images)
     images = (images - img_mean) / img_term
     return images
+
+def plot_history(history):
+    """ Plots loss, val_loss, accuracy, and val_accuray as two plots
+    side-by-side.
+    """
+    fig, ax = plt.subplots(1, 2, figsize=(14, 6))
+    num_epochs = len(history.history['loss'])
+    ax[0].plot(history.history['loss'], label='training')
+    ax[0].plot(history.history['val_loss'], label='validation')
+    ax[0].set_title("Model loss")
+    ax[0].set_xlabel("Epoch")
+    ax[0].set_ylabel("Loss")
+    ax[0].set_xticks(np.arange(num_epochs))
+    ax[0].legend()
+
+    ax[1].plot(history.history['accuracy'], label='training')
+    ax[1].plot(history.history['val_accuracy'], label='validation')
+    ax[1].set_title("Model accuracy")
+    ax[1].set_xlabel("Epoch")
+    ax[1].set_ylabel("Accuracy")
+    ax[1].set_xticks(np.arange(num_epochs))
+    ax[1].legend()
+    return fig, ax
