@@ -4,6 +4,6 @@ Standalone repository for classification example on simulated data that can be u
 TODO:
 * Data import and exploration
     * Check if transpose of images is necessary
-    * Pandas currently only used for descriptive stats.
-	Not too very well suited for images.
-    * Storage example using hdf5 format
+
+* Classification
+    * Swap from tf.keras to just keras
