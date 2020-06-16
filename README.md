@@ -7,3 +7,4 @@ TODO:
 
 * Classification
     * Swap from tf.keras to just keras
+    * Add F1-score, confusion matrix, ROC-curve to evaluations
