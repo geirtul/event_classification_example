@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from sklearn.metrics import roc_curve, roc_auc_score
 
 
 def import_data(path=None, num_samples=None):
@@ -94,3 +95,19 @@ def plot_history(history):
     ax[1].set_xticks(np.arange(num_epochs))
     ax[1].legend()
     return fig, ax
+
+def plot_roc_auc(labels, pred):
+    """ Plots the Receiver-Operator Characteristic Curve with Area Under Curve.
+    """
+    fpr, tpr, thresholds = roc_curve(labels, pred)
+    roc_auc = roc_auc_score(labels, pred)
+
+    fig, ax = plt.subplots()
+    ax.plot(fpr, tpr, color='darkorange', lw=2, label="ROC curve (area = {:0.2f})".format(roc_auc))
+    ax.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--', label="Random classifier")
+    ax.set_xlim([0.0, 1.0])
+    ax.set_ylim([0.0, 1.05])
+    ax.set_xlabel('False Positive Rate')
+    ax.set_ylabel('True Positive Rate')
+    ax.set_title('Receiver operating characteristic')
+    ax.legend()
