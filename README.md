@@ -9,7 +9,8 @@ This notebook contains a walkthrough from the first import of the data, formatti
 initial analysis and exploration, and finally storing the data in a desired format.
 
 ### logistic
-Scikit-Learn example on using logistic regression to classify the data
+Scikit-Learn example on using logistic regression to classify the data. Presents the metrics we use
+to assess the performance of a binary classifier.
 
 ### dense
 Keras example on using a fully-connected neural network to classify the data
