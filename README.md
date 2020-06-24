@@ -2,15 +2,7 @@
 Standalone repository for classification example on simulated data that can be used in ML course.
 
 # Content
-## Notebooks
-├── notebooks\
-│   ├── convolutional.ipynb\
-│   ├── data_import_exploration.ipynb\
-│   ├── data_import_exploration_traces.ipynb\
-│   ├── dense_neural_network.ipynb\
-│   ├── helper_functions.py\
-│   ├── logistic.ipynb\
-└── README.md\
+## /notebooks
 
 ### data_import_exploration
 This notebook contains a walkthrough from the first import of the data, formatting the data,
@@ -25,13 +17,11 @@ Keras example on using a fully-connected neural network to classify the data
 ### convolutional
 Keras example on using a convolutional neural network to classify the data
 
-## Data 
-├── data\
-│   ├── CeBr10k_1.txt\
-│   ├── CeBr200k_Mix.txt.gz\
-
-The repository includes one file with 10000 events (CeBr10k_1), and one file with 200k events (CeBr200k_Mix.txt.gz).
-The latter is compressed to comply with githubs max file size for regular repositories.
+## /data 
+1. CeBr10k_1.txt
+ * file with 10000 events
+2. CeBr200k_Mix.txt.gz
+ * file with 200k events, compressed to comply with githubs max file size for regular repositories.
 
 
 # TODO:
