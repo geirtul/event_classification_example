@@ -18,6 +18,10 @@ Keras example on using a fully-connected neural network to classify the data
 ### convolutional
 Keras example on using a convolutional neural network to classify the data
 
+### helper_functions.py
+Collection of functions developed throughout the notebooks that are useful to store
+for easier re-use.
+
 ## /data 
 * CeBr10k_1.txt
   * file with 10000 events
