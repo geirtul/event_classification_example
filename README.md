@@ -18,10 +18,10 @@ Keras example on using a fully-connected neural network to classify the data
 Keras example on using a convolutional neural network to classify the data
 
 ## /data 
-1. CeBr10k_1.txt
- * file with 10000 events
-2. CeBr200k_Mix.txt.gz
- * file with 200k events, compressed to comply with githubs max file size for regular repositories.
+* CeBr10k_1.txt
+  * file with 10000 events
+* CeBr200k_Mix.txt.gz
+  * file with 200k events, compressed to comply with githubs max file size for regular repositories.
 
 
 # TODO:
