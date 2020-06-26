@@ -27,6 +27,8 @@ for easier re-use.
   * file with 10000 events
 * CeBr200k_Mix.txt.gz
   * file with 200k events, compressed to comply with githubs max file size for regular repositories.
+* training_pm_nosat_150k.dat.gz
+  * file with 150k traces, compressed.
 
 
 # TODO:
