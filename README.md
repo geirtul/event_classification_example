@@ -8,6 +8,9 @@ Standalone repository for classification example on simulated data that can be u
 This notebook contains a walkthrough from the first import of the data, formatting the data,
 initial analysis and exploration, and finally storing the data in a desired format.
 
+### data_import_exploration_traces
+A starting point for working with the traces datafile.
+
 ### logistic
 Scikit-Learn example on using logistic regression to classify the data. Presents the metrics we use
 to assess the performance of a binary classifier.
@@ -27,6 +30,8 @@ for easier re-use.
   * file with 10000 events
 * CeBr200k_Mix.txt.gz
   * file with 200k events, compressed to comply with githubs max file size for regular repositories.
+* training_pm_nosat_150k.dat.gz
+  * file with 150k traces, compressed.
 
 
 # TODO:
