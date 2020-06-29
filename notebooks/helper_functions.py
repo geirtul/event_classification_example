@@ -68,10 +68,11 @@ def normalize_image_data(images):
     """ Takes an imported set of images and normalizes values to between
     0 and 1 using min-max scaling across the whole image set.
     """
-    img_term = np.amax(images) - np.amin(images)
-    img_mean = np.mean(images)
-    images = (images - img_mean) / img_term
+    img_max = np.amax(images)
+    img_min = np.amin(images)
+    images = (images - img_min) / (img_max - img_min)
     return images
+
 
 def plot_history(history):
     """ Plots loss, val_loss, accuracy, and val_accuray as two plots
@@ -96,6 +97,7 @@ def plot_history(history):
     ax[1].legend()
     return fig, ax
 
+
 def plot_roc_auc(labels, pred):
     """ Plots the Receiver-Operator Characteristic Curve with Area Under Curve.
     """
@@ -103,8 +105,10 @@ def plot_roc_auc(labels, pred):
     roc_auc = roc_auc_score(labels, pred)
 
     fig, ax = plt.subplots()
-    ax.plot(fpr, tpr, color='darkorange', lw=2, label="ROC curve (area = {:0.2f})".format(roc_auc))
-    ax.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--', label="Random classifier")
+    ax.plot(fpr, tpr, color='darkorange', lw=2,
+            label="ROC curve (area = {:0.2f})".format(roc_auc))
+    ax.plot([0, 1], [0, 1], color='navy', lw=2,
+            linestyle='--', label="Random classifier")
     ax.set_xlim([0.0, 1.0])
     ax.set_ylim([0.0, 1.05])
     ax.set_xlabel('False Positive Rate')
